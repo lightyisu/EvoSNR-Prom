@@ -261,7 +261,7 @@ def main():
             {"params": downstream_params, "lr": 2e-4}  # 为下游任务模块设置一个较大的学习率
         ]
 
-        # 注意：这里为了简化，没有再区分 weight_decay，您可以按需合并
+        # 注意：这里为了简化，没有再区分 weight_decay
         optimizer = optim.AdamW(optimizer_grouped_parameters, eps=1e-8, betas=(0.9, 0.999))
         # optimizer = optim.AdamW(optimizer_grouped_parameters, lr=2e-4, eps=1e-8,
         #                     betas=(0.9, 0.999))
@@ -352,7 +352,7 @@ def main():
                     kmer_embeddings_val = match_and_embed_with_kmers_batch(val_sentences, kmer_vocab_target, target_kmer_counts,FastTextModel_target_path,target_kmer_embedding_cache)
                     
                     
-                    # 获取CRF预测序列
+                  
                     logits = NeuralNetwork.hidden2tag_t(
                         NeuralNetwork.EvoEmb(val_sentences, kmer_embeddings_val)
                     )
@@ -431,7 +431,7 @@ def main():
                         test_seqs, kmer_vocab_target, target_kmer_counts, FastTextModel_target_path,target_kmer_embedding_cache
                     )
                     
-                       # 获取CRF预测序列
+                   
                     logits = NeuralNetwork.hidden2tag_t(
                         NeuralNetwork.EvoEmb(test_seqs, kmer_embeddings)
                     )
