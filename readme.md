@@ -32,16 +32,17 @@ conda activate evosnr
 ```
 pip install -r requirements.txt
 ```
-1.3  Modify train_config.py 
 
-To customize the training setup according to your specific requirements, you need to modify the parameters in the ```train_config.py``` file. 
-The key configurations you should update: Dataset Path,Lexicons Path,  FastText Pre-trained Model Path
-
-1.4 download datasets of EvoSNR-Prom
+1.3 download datasets of EvoSNR-Prom
 >  Note: The dataset includes large FastText model weights, so it is hosted on Hugging Face Hub instead of being stored directly in this repository.
 
 datasets link: https://huggingface.co/datasets/lightyisu/EvoSNR-Prom
 Download the data folder and overwrite the existing data directory in repository .
+
+1.4  Modify train_config.py 
+
+To customize the training setup according to your specific requirements, you need to modify the parameters in the ```train_config.py``` file. 
+The key configurations you should update: Dataset Path,Lexicons Path,  FastText Pre-trained Model Path
 
 2.train EvoSNR-Prom
 ```python
