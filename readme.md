@@ -46,5 +46,5 @@ The key configurations you should update: Dataset Path,Lexicons Path,  FastText 
 
 2.train EvoSNR-Prom
 ```python
-python train.py
+python train_EvoSNR-Prom.py
 ```
