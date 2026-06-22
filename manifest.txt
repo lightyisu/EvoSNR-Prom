@@ -1,0 +1,15 @@
+#manifest for paper transfer learning
+# 1.source:
+ Sinorhizobium meliloti 1021 (17003)
+
+  target:
+ Agrobacterium tumefaciens strain C58 (706)
+
+# 2.source:
+ Escherichia coli str K-12 substr. MG1655 (8709)
+
+ target:
+ Klebsiella aerogenes KCTC 2190 (763)
+
+
+

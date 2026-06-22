@@ -1,0 +1,5 @@
+*.bin
+*.model
+weights/*
+!weights/.gitkeep
+cache/
