@@ -29,10 +29,11 @@ def readfile(input_file):
     annotations = []
     
     # 使用制表符分隔，无标题行，并指定列名
-    df = pd.read_csv(input_file, 
+    df = pd.read_csv(input_file,
                     sep='\t',          # 指定分隔符为制表符
                     header=None,       # 文件没有标题行
-                    names=['Sequence', 'Annotation'])  # 手动指定列名
+                    names=['Sequence', 'Annotation'],  # 手动指定列名
+                    dtype=str)         # 强制以字符串读取,避免 Annotation 被转为 int
     
     # 验证列是否正确
     required_columns = ['Sequence', 'Annotation']
